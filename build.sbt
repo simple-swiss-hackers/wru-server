@@ -7,11 +7,14 @@ lazy val root = (project in file(".")).enablePlugins(PlayScala)
 scalaVersion := "2.11.6"
 
 libraryDependencies ++= Seq(
-  jdbc,
   cache,
-  ws,
   specs2 % Test
 )
+
+libraryDependencies += "com.sksamuel.elastic4s" %% "elastic4s-core" % "1.7.4"
+libraryDependencies += "joda-time" % "joda-time" % "2.9.1"
+
+
 
 resolvers += "scalaz-bintray" at "http://dl.bintray.com/scalaz/releases"
 
