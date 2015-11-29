@@ -6,15 +6,15 @@ import play.api.libs.functional.syntax._
 object Location {
 
   implicit val locationReads: Reads[Location] = (
-    (JsPath \ "latitude").read[Double] and
-    (JsPath \ "longitude").read[Double]
+    (JsPath \ "lat").read[Double] and
+    (JsPath \ "lon").read[Double]
   )(Location.apply _)
 
 
   implicit val locationWrites = new Writes[Location] {
     def writes(location: Location) = Json.obj(
-      "latitude" -> location.latitude,
-      "longitude" -> location.longitude
+      "lat" -> location.latitude,
+      "lon" -> location.longitude
     )
   }
 
