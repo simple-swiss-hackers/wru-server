@@ -2,8 +2,17 @@
 # This file defines all application routes (Higher priority routes first)
 # ~~~~
 
-# Home page
-GET     /                           controllers.Application.index
 
-# Map static resources from the /public folder to the /assets URL path
-GET     /assets/*file               controllers.Assets.versioned(path="/public", file: Asset)
+GET   /ads/:id          ch.simpleswisshackers.backend.controllers.AdController.showAd(id: Int)
+POST  /ads              ch.simpleswisshackers.backend.controllers.AdController.addAd()
+
+
+# PUT /user/:fid
+# { token: string, push: string }
+
+# POST /ads/query
+# { fid: string, token: string, latitude: double, longitude: double }
+# -> { results: [ ads ] }
+
+
+
