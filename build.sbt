@@ -11,7 +11,7 @@ libraryDependencies ++= Seq(
   specs2 % Test
 )
 
-libraryDependencies += "com.sksamuel.elastic4s" %% "elastic4s-core" % "1.7.4"
+libraryDependencies += "org.elasticsearch" % "elasticsearch" % "2.1.0"
 libraryDependencies += "joda-time" % "joda-time" % "2.9.1"
 
 
